@@ -42,9 +42,9 @@ function yourtheme_enqueue() {
   // Custom SCSS (compiled to CSS)
   wp_enqueue_style(
     'yourtheme-style',
-    get_template_directory_uri() . '/css/main.css', // Path to compiled CSS
+    get_template_directory_uri() . '/Styling/main.css', // Updated path to compiled CSS
     ['bootstrap-css'], // Dependency on Bootstrap
-    filemtime(get_template_directory() . '/css/main.css') // Versioning based on file modification time
+    filemtime(get_template_directory() . '/Styling/main.css') // Versioning based on file modification time
   );
 
   // Bootstrap JS (with Popper.js)
@@ -85,3 +85,9 @@ function yourtheme_widgets_init() {
   ]);
 }
 add_action('widgets_init', 'yourtheme_widgets_init');
+
+// Register Custom Navigation Walker
+function register_navwalker(){
+    require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
