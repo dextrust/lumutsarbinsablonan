@@ -9,8 +9,8 @@
 .custom-header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
+  padding: 0 15px;
 }
 .custom-header .site-logo {
   font-family: "Contrail One", sans-serif;
@@ -29,13 +29,16 @@
   bottom: 0;
 }
 .custom-header .search-form {
-  margin: 0 auto;
+  flex: 1;
+  margin: 0 15px;
+}
+.custom-header .navbar {
+  margin-left: auto;
 }
 
 .search-form {
-  max-width: 400px;
   width: 100%;
-  margin: auto;
+  margin: 0;
 }
 .search-form .input-group {
   border: 1px solid #ccc;

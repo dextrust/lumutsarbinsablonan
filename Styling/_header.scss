@@ -9,8 +9,8 @@
     .container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         width: 100%;
+        padding: 0 15px;
     }
 
     .site-logo {
@@ -33,6 +33,11 @@
     }
 
     .search-form {
-        margin: 0 auto; // Center the search form if needed
+        flex: 1;
+        margin: 0 15px; // Add some margin to space it nicely between the logo and nav
+    }
+
+    .navbar {
+        margin-left: auto;
     }
 }
