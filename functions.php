@@ -34,9 +34,9 @@ function yourtheme_enqueue() {
   // Bootstrap CSS
   wp_enqueue_style(
     'bootstrap-css',
-    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
     [],
-    '5.3.0'
+    '5.3.3'
   );
 
   // Custom SCSS (compiled to CSS)
@@ -50,9 +50,9 @@ function yourtheme_enqueue() {
   // Bootstrap JS (with Popper.js)
   wp_enqueue_script(
     'bootstrap-js',
-    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
     [], // No dependencies
-    '5.3.0',
+    '5.3.3',
     true // Load in footer
   );
 
@@ -88,6 +88,6 @@ add_action('widgets_init', 'yourtheme_widgets_init');
 
 // Register Custom Navigation Walker
 function register_navwalker(){
-    require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+    require_once get_template_directory() . '/inc/class-bootstrap-5-nav-walker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );

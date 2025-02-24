@@ -1,0 +1,51 @@
+.search-form {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+
+    .input-group {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .search-input {
+        padding: 8px 12px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #666;
+        background-color: #fff;
+        border: none; // Ensure no border overlaps with input-group
+        box-shadow: none; // Remove Bootstrap's default shadow
+        outline: none;
+
+        &::placeholder {
+            color: #999;
+            opacity: 1; // Ensure placeholder is fully visible
+        }
+
+        &:focus {
+            box-shadow: none; // Remove focus shadow for clean look
+            border-color: transparent; // Ensure no border color change on focus
+        }
+    }
+
+    .search-btn {
+        padding: 8px 12px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 18px;
+            color: #666;
+        }
+
+        &:hover i {
+            color: #000;
+        }
+    }
+}
